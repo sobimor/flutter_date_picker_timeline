@@ -9,7 +9,7 @@ import 'package:scroll_to_index/scroll_to_index.dart';
 /// Callback exposing currently selected date.
 typedef DateChangeListener = Function(DateTime date);
 
-/// Gregorian and Jalali customizable timeline date picker
+/// Gregorian and Jalali customizable date picker as a horizontal timeline
 class FlutterDatePickerTimeline extends StatefulWidget {
   FlutterDatePickerTimeline({
     Key key,
