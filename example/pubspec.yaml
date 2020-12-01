@@ -1,0 +1,17 @@
+name: flutter_date_picker_timeline_example
+description: Demonstrates how to use the flutter_date_picker_timeline plugin.
+publish_to: none
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_date_picker_timeline:
+    path:  ../
+
+flutter:
+  uses-material-design: true

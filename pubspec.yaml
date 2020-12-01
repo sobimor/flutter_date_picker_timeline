@@ -1,0 +1,27 @@
+name: flutter_date_picker_timeline
+description: A Gregorian and Jalali customizable timeline date picker
+version: 0.1.0
+homepage: https://github.com/sobimor/flutter_date_picker_timeline
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: ^0.16.1
+  shamsi_date: ^0.9.1
+  scroll_to_index: ^1.0.6
+
+flutter:
+
+  fonts:
+    - family: Dana
+      fonts:
+        - asset: assets/fonts/dana.ttf
+
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/nunito.ttf
+
+ 
