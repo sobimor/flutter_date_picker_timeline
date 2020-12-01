@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 11, bottom: 11),
                 decoration: BoxDecoration(color: const Color(0xFFF5F5F5)),
                 child: FlutterDatePickerTimeline(
-                  calendarMode: CalendarMode.gregorian,
                   startDate: DateTime(2020, 07, 01),
                   endDate: DateTime(2020, 12, 30),
                   initialSelectedDate: DateTime(2020, 07, 24),
