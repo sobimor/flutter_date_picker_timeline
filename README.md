@@ -1,7 +1,5 @@
 # Flutter Date Picker Timeline
-
 ![Flutter Date Picker Timeline Banner](https://raw.githubusercontent.com/sobimor/flutter_date_picker_timeline/master/repo_files/images/banner.png)
-
 [![pub package](https://img.shields.io/pub/v/flutter_date_picker_timeline.svg)](https://pub.dartlang.org/packages/flutter_date_picker_timeline)
 
 💥 Gregorian and Jalali customizable date picker as a horizontal timeline  💥
@@ -93,4 +91,25 @@ FlutterDatePickerTimeline({
     @required this.onSelectedDateChange,
   }) : super(key: key);
 ```
+
+## Props
+| props                   | types           | defaultValues                                                                                                     |
+| :---------------------- | :-------------: | :---------------------------------------------------------------------------------------------------------------: |
+| calendarMode        | `CalendarMode`        | CalendarMode.gregorian |
+| startDate       | `DateTime`     | |
+| endDate           | `DateTime`     | |
+| initialSelectedDate       | `DateTime`     | |
+| initialFocusedDate | `DateTime`         | If nothing is provided, a [initialSelectedDate] will be used |
+| selectedItemWidth       | `double`     | 170 |
+| unselectedItemWidth | `double`         | 38 |
+| itemHeight       | `double`     | 38 |
+| itemRadius | `double`         | 10 |
+| listViewPadding       | `EdgeInsets`     | const EdgeInsets.only(right: 5.5, left: 5.5) |
+| selectedItemMargin | `EdgeInsets`         | const EdgeInsets.only(right: 5.5, left: 5.5) |
+| unselectedItemMargin       | `EdgeInsets`     | const EdgeInsets.only(right: 5.5, left: 5.5) |
+| selectedItemBackgroundColor | `Color`         | const Color(0xFF2B2C30) |
+| unselectedItemBackgroundColor       | `Color`     | Colors.white |
+| selectedItemTextStyle | `TextStyle`         | TextStyle(fontFamily: widget.calendarMode == CalendarMode.gregorian ? 'nunito' : 'dana', package: 'flutter_date_picker_timeline', color: widget.unselectedItemBackgroundColor) |
+| unselectedItemTextStyle       | `TextStyle`     | TextStyle(fontFamily: widget.calendarMode == CalendarMode.gregorian ? 'nunito' : 'dana', package: 'flutter_date_picker_timeline', color: widget.selectedItemBackgroundColor) |
+| onSelectedDateChange | `DateChangeListener`         | |
 
