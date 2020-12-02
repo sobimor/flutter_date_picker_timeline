@@ -1,6 +1,6 @@
 name: flutter_date_picker_timeline
 description: A Gregorian and Jalali customizable date picker as a horizontal timeline
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/sobimor/flutter_date_picker_timeline
 
 environment:
