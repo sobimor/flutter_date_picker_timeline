@@ -5,7 +5,9 @@
 💥 Gregorian and Jalali customizable date picker as a horizontal timeline  💥
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/sobimor/flutter_date_picker_timeline/master/repo_files/images/screenshot.jpg" width="300" title="Screenshot">
+<img src="https://raw.githubusercontent.com/sobimor/flutter_date_picker_timeline/master/repo_files/images/screenshot_ios.png" width="300" alt="Screenshot iOS">
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/sobimor/flutter_date_picker_timeline/master/repo_files/images/screenshot_android.jpg" width="300" alt="Screenshot android">
 </p><br>
 
 # Let's get started
