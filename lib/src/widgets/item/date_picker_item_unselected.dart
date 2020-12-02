@@ -29,11 +29,14 @@ class DatePickerItemUnselected extends StatelessWidget {
       child: Container(
           width: width,
           margin: itemMargin,
-          decoration:
-              new BoxDecoration(color: itemBackgroundColor, borderRadius: BorderRadius.all(Radius.circular(itemRadius))),
+          decoration: new BoxDecoration(
+              color: itemBackgroundColor,
+              borderRadius: BorderRadius.all(Radius.circular(itemRadius))),
           child: Center(
               child: Text(
-            calendarMode == CalendarMode.gregorian ? date.day.toString() : date.getJalaliDay(),
+            calendarMode == CalendarMode.gregorian
+                ? date.day.toString()
+                : date.getJalaliDay(),
             style: textStyle,
           ))),
     );

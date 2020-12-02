@@ -25,11 +25,14 @@ class DatePickerItemSelected extends StatelessWidget {
     return Container(
         width: width,
         margin: itemMargin,
-        decoration:
-            new BoxDecoration(color: itemBackgroundColor, borderRadius: BorderRadius.all(Radius.circular(itemRadius))),
+        decoration: new BoxDecoration(
+            color: itemBackgroundColor,
+            borderRadius: BorderRadius.all(Radius.circular(itemRadius))),
         child: Center(
             child: Text(
-          calendarMode == CalendarMode.gregorian ? date.getGregorianWeekDayAndDate() : date.getJalaliWeekDayAndDate(),
+          calendarMode == CalendarMode.gregorian
+              ? date.getGregorianWeekDayAndDate()
+              : date.getJalaliWeekDayAndDate(),
           style: textStyle,
         )));
   }
