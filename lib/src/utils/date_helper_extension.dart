@@ -2,6 +2,14 @@ import 'package:intl/intl.dart';
 import 'package:shamsi_date/shamsi_date.dart';
 
 extension DateHelperExtension on DateTime {
+  int dateDifference(DateTime secondDate) {
+    if (secondDate == null) return null;
+
+    return DateTime(this.year, this.month, this.day)
+        .difference(DateTime(secondDate.year, secondDate.month, secondDate.day))
+        .inDays;
+  }
+
   bool isSameDate(DateTime other) {
     return this.year == other.year &&
         this.month == other.month &&

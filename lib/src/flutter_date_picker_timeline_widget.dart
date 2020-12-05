@@ -189,8 +189,7 @@ class _FlutterDatePickerTimelineState extends State<FlutterDatePickerTimeline> {
                       scrollDirection: Axis.horizontal,
                       controller: _scrollController,
                       itemCount:
-                          widget.endDate.difference(widget.startDate).inDays +
-                              1,
+                          widget.endDate.dateDifference(widget.startDate) + 1,
                       itemBuilder: (BuildContext context, int index) {
                         DateTime itemDate =
                             widget.startDate.add(Duration(days: index));
@@ -234,7 +233,7 @@ class _FlutterDatePickerTimelineState extends State<FlutterDatePickerTimeline> {
 
   bool _isDatePickerItemSelected(DateTime itemDate, DateTime selectedDate) {
     if (selectedDate == null) return false;
-    return itemDate.difference(selectedDate).inDays == 0;
+    return itemDate.dateDifference(selectedDate) == 0;
   }
 
   _setSelectedDate(DateTime date) {
@@ -250,6 +249,6 @@ class _FlutterDatePickerTimelineState extends State<FlutterDatePickerTimeline> {
   _scrollToInitialFocusedDate() async {
     final DateTime initialFocusedDate =
         widget.initialFocusedDate ?? widget.initialSelectedDate;
-    _scrollToIndex(initialFocusedDate.difference(widget.startDate).inDays);
+    _scrollToIndex(initialFocusedDate.dateDifference(widget.startDate));
   }
 }
