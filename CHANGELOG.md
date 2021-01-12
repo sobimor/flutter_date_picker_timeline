@@ -1,5 +1,8 @@
+## 0.1.5
+* feat: downgrade intl plugin to the last stable version
+
 ## 0.1.4
-* feat: update intl plugin to last version
+* feat: update intl plugin to the last version
 
 ## 0.1.3
 * fix: selecting multiple selected dates
