@@ -168,9 +168,11 @@ class _FlutterDatePickerTimelineState extends State<FlutterDatePickerTimeline> {
   @override
   Widget build(BuildContext context) {
     return Directionality(
-      textDirection: widget.textDirection ?? widget.calendarMode == CalendarMode.jalali
-          ? TextDirection.rtl
-          : TextDirection.ltr,
+      textDirection: widget.textDirection == null
+          ? widget.calendarMode == CalendarMode.jalali
+              ? TextDirection.rtl
+              : TextDirection.ltr
+          : widget.textDirection,
       child: Container(
         height: widget.itemHeight,
         child: ScrollConfiguration(
