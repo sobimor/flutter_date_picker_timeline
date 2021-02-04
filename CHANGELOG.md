@@ -1,3 +1,6 @@
+## 0.1.6
+* feat: add textDirection property in [FlutterDatePickerTimeline](https://github.com/sobimor/flutter_date_picker_timeline/blob/master/lib/src/flutter_date_picker_timeline_widget.dart), #2.
+
 ## 0.1.5
 * feat: downgrade intl plugin to the last stable version
 

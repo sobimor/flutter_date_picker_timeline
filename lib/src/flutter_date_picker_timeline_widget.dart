@@ -18,6 +18,7 @@ class FlutterDatePickerTimeline extends StatefulWidget {
     @required this.endDate,
     this.initialSelectedDate,
     this.initialFocusedDate,
+    this.textDirection,
     this.selectedItemWidth = 170,
     this.unselectedItemWidth = 38,
     this.itemHeight = 38,
@@ -64,6 +65,13 @@ class FlutterDatePickerTimeline extends StatefulWidget {
   ///
   /// If nothing is provided, a [initialSelectedDate] will be used.
   final DateTime initialFocusedDate;
+
+  /// Used for setting the textDirection of [FlutterDatePickerTimeline].
+  ///
+  /// If nothing is provided, a [calendarMode] will be used.
+  /// For [CalendarMode.gregorian] use [TextDirection.ltr]
+  /// For [CalendarMode.jalali] use [TextDirection.rtl]
+  final TextDirection textDirection;
 
   /// Used for setting the width of selected items.
   ///
@@ -173,9 +181,10 @@ class _FlutterDatePickerTimelineState extends State<FlutterDatePickerTimeline> {
   @override
   Widget build(BuildContext context) {
     return Directionality(
-      textDirection: widget.calendarMode == CalendarMode.jalali
-          ? TextDirection.rtl
-          : TextDirection.ltr,
+      textDirection: widget.textDirection ??
+          (widget.calendarMode == CalendarMode.jalali
+              ? TextDirection.rtl
+              : TextDirection.ltr),
       child: Container(
         height: widget.itemHeight,
         child: ScrollConfiguration(
