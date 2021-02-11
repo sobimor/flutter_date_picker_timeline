@@ -177,6 +177,15 @@ class _FlutterDatePickerTimelineState extends State<FlutterDatePickerTimeline> {
   }
 
   @override
+  void didUpdateWidget(covariant FlutterDatePickerTimeline oldWidget) {
+    ///when [initialSelectedDate] changing after the initial set
+    if (oldWidget.initialSelectedDate != widget.initialSelectedDate) {
+      _setSelectedDate(widget.initialSelectedDate);
+    }
+    super.didUpdateWidget(oldWidget);
+  }
+
+  @override
   void dispose() {
     _selectedDateValueNotifier.dispose();
     super.dispose();
