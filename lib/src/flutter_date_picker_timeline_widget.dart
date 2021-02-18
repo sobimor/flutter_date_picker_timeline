@@ -11,33 +11,32 @@ typedef DateChangeListener = Function(DateTime date);
 
 /// Gregorian and Jalali customizable date picker as a horizontal timeline
 class FlutterDatePickerTimeline extends StatefulWidget {
-  FlutterDatePickerTimeline(
-      {Key key,
-      this.calendarMode = CalendarMode.gregorian,
-      @required this.startDate,
-      @required this.endDate,
-      this.initialSelectedDate,
-      this.initialFocusedDate,
-      this.textDirection,
-      this.selectedItemWidth = 170,
-      this.unselectedItemWidth = 38,
-      this.itemHeight = 38,
-      this.itemRadius = 10,
-      this.listViewPadding = const EdgeInsets.only(right: 5.5, left: 5.5),
-      this.selectedItemMargin = const EdgeInsets.only(right: 5.5, left: 5.5),
-      this.unselectedItemMargin = const EdgeInsets.only(right: 5.5, left: 5.5),
-      this.selectedItemBackgroundColor = const Color(0xFF2B2C30),
-      this.unselectedItemBackgroundColor = Colors.white,
-      this.selectedItemTextStyle,
-      this.unselectedItemTextStyle,
-      @required this.onSelectedDateChange,
-      this.isSameDate: false})
-      : assert(startDate != null),
+  FlutterDatePickerTimeline({
+    Key key,
+    this.calendarMode = CalendarMode.gregorian,
+    @required this.startDate,
+    @required this.endDate,
+    this.initialSelectedDate,
+    this.initialFocusedDate,
+    this.textDirection,
+    this.selectedItemWidth = 170,
+    this.unselectedItemWidth = 38,
+    this.itemHeight = 38,
+    this.itemRadius = 10,
+    this.listViewPadding = const EdgeInsets.only(right: 5.5, left: 5.5),
+    this.selectedItemMargin = const EdgeInsets.only(right: 5.5, left: 5.5),
+    this.unselectedItemMargin = const EdgeInsets.only(right: 5.5, left: 5.5),
+    this.selectedItemBackgroundColor = const Color(0xFF2B2C30),
+    this.unselectedItemBackgroundColor = Colors.white,
+    this.selectedItemTextStyle,
+    this.unselectedItemTextStyle,
+    @required this.onSelectedDateChange,
+  })  : assert(startDate != null),
         assert(endDate != null),
-        assert(isSameDate || !startDate.isSameDate(endDate),
-            "If [$isSameDate] is not true Start and end dates must not be the same!"),
-        assert(isSameDate || endDate.isAfter(startDate),
-            "If [$isSameDate] is not true  End date must not be before start date!"),
+        assert(!startDate.isSameDate(endDate),
+            "Start and end dates must not be the same!"),
+        assert(endDate.isAfter(startDate),
+            "End date must not be before start date!"),
         assert(
             initialSelectedDate == null ||
                 initialSelectedDate.isInRange(startDate, endDate),
@@ -137,9 +136,6 @@ class FlutterDatePickerTimeline extends StatefulWidget {
 
   /// Called whenever any date gets selected.
   final DateChangeListener onSelectedDateChange;
-
-  /// Used for show only one Day in calendar
-  final bool isSameDate;
 
   @override
   _FlutterDatePickerTimelineState createState() =>
