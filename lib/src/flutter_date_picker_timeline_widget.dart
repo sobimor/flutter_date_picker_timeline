@@ -33,10 +33,8 @@ class FlutterDatePickerTimeline extends StatefulWidget {
     @required this.onSelectedDateChange,
   })  : assert(startDate != null),
         assert(endDate != null),
-        assert(!startDate.isSameDate(endDate),
-            "Start and end dates must not be the same!"),
-        assert(endDate.isAfter(startDate),
-            "End date must not be before start date!"),
+        assert((endDate.isSameDate(startDate) || endDate.isAfter(startDate)),
+            "The end date must be same or before the start date!"),
         assert(
             initialSelectedDate == null ||
                 initialSelectedDate.isInRange(startDate, endDate),
@@ -174,7 +172,6 @@ class _FlutterDatePickerTimelineState extends State<FlutterDatePickerTimeline> {
 
   @override
   void didUpdateWidget(covariant FlutterDatePickerTimeline oldWidget) {
-    ///when [initialSelectedDate] changing after the initial set
     if (oldWidget.initialSelectedDate != widget.initialSelectedDate) {
       _setSelectedDate(widget.initialSelectedDate);
     }

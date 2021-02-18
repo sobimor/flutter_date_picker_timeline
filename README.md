@@ -18,7 +18,7 @@
 
 ```yml
 dependencies:
-  flutter_date_picker_timeline: ^0.1.6
+  flutter_date_picker_timeline: ^0.2.0
 ```
 
 
@@ -104,6 +104,7 @@ FlutterDatePickerTimeline({
 | endDate           | `DateTime`     | |
 | initialSelectedDate       | `DateTime`     | |
 | initialFocusedDate | `DateTime`         | If nothing is provided, a [initialSelectedDate] will be used |
+| textDirection       | `TextDirection`     | If nothing is provided, a [calendarMode] will be used. (CalendarMode.gregorian -> TextDirection.ltr , CalendarMode.jalali -> TextDirection.rtl) |
 | selectedItemWidth       | `double`     | 170 |
 | unselectedItemWidth | `double`         | 38 |
 | itemHeight       | `double`     | 38 |
@@ -116,4 +117,3 @@ FlutterDatePickerTimeline({
 | selectedItemTextStyle | `TextStyle`         | TextStyle(fontFamily: widget.calendarMode == CalendarMode.gregorian ? 'nunito' : 'dana', package: 'flutter_date_picker_timeline', color: widget.unselectedItemBackgroundColor) |
 | unselectedItemTextStyle       | `TextStyle`     | TextStyle(fontFamily: widget.calendarMode == CalendarMode.gregorian ? 'nunito' : 'dana', package: 'flutter_date_picker_timeline', color: widget.selectedItemBackgroundColor) |
 | onSelectedDateChange | `DateChangeListener`         | |
-| textDirection       | `TextDirection`     | If nothing is provided, a [calendarMode] will be used. (CalendarMode.gregorian -> TextDirection.ltr , CalendarMode.jalali -> TextDirection.rtl) |

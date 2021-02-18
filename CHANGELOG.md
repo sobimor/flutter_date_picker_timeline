@@ -1,3 +1,7 @@
+## 0.2.0
+* feat: now startDate and endDate can be same for showing just one date, #3.
+* fix: now initialSelectedDate can change after initial set, #3.
+
 ## 0.1.6
 * feat: add textDirection property in [FlutterDatePickerTimeline](https://github.com/sobimor/flutter_date_picker_timeline/blob/master/lib/src/flutter_date_picker_timeline_widget.dart), #2.
 
