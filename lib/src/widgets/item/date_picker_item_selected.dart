@@ -4,13 +4,13 @@ import 'package:flutter_date_picker_timeline/src/models/enums/calendar_mode.dart
 
 class DatePickerItemSelected extends StatelessWidget {
   const DatePickerItemSelected(
-      {@required this.date,
-      @required this.calendarMode,
-      @required this.width,
-      @required this.itemRadius,
-      @required this.itemMargin,
-      @required this.itemBackgroundColor,
-      @required this.textStyle});
+      {required this.date,
+      required this.calendarMode,
+      required this.width,
+      required this.itemRadius,
+      required this.itemMargin,
+      required this.itemBackgroundColor,
+      required this.textStyle});
 
   final DateTime date;
   final CalendarMode calendarMode;

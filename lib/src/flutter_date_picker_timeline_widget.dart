@@ -7,15 +7,15 @@ import 'package:flutter_date_picker_timeline/src/utils/date_helper_extension.dar
 import 'package:scroll_to_index/scroll_to_index.dart';
 
 /// Callback exposing currently selected date.
-typedef DateChangeListener = Function(DateTime date);
+typedef DateChangeListener = Function(DateTime? date);
 
 /// Gregorian and Jalali customizable date picker as a horizontal timeline
 class FlutterDatePickerTimeline extends StatefulWidget {
   FlutterDatePickerTimeline({
-    Key key,
+    Key? key,
     this.calendarMode = CalendarMode.gregorian,
-    @required this.startDate,
-    @required this.endDate,
+    required this.startDate,
+    required this.endDate,
     this.initialSelectedDate,
     this.initialFocusedDate,
     this.textDirection,
@@ -30,10 +30,8 @@ class FlutterDatePickerTimeline extends StatefulWidget {
     this.unselectedItemBackgroundColor = Colors.white,
     this.selectedItemTextStyle,
     this.unselectedItemTextStyle,
-    @required this.onSelectedDateChange,
-  })  : assert(startDate != null),
-        assert(endDate != null),
-        assert((endDate.isSameDate(startDate) || endDate.isAfter(startDate)),
+    required this.onSelectedDateChange,
+  })   : assert((endDate.isSameDate(startDate) || endDate.isAfter(startDate)),
             "The end date must be same or before the start date!"),
         assert(
             initialSelectedDate == null ||
@@ -57,19 +55,19 @@ class FlutterDatePickerTimeline extends StatefulWidget {
   final DateTime endDate;
 
   /// Initially selected date. Usually it will be `DateTime.now()`.
-  final DateTime initialSelectedDate;
+  final DateTime? initialSelectedDate;
 
   /// Initially focused date. Usually it will be `DateTime.now()`.
   ///
   /// If nothing is provided, a [initialSelectedDate] will be used.
-  final DateTime initialFocusedDate;
+  final DateTime? initialFocusedDate;
 
   /// Used for setting the textDirection of [FlutterDatePickerTimeline].
   ///
   /// If nothing is provided, a [calendarMode] will be used.
   /// For [CalendarMode.gregorian] use [TextDirection.ltr]
   /// For [CalendarMode.jalali] use [TextDirection.rtl]
-  final TextDirection textDirection;
+  final TextDirection? textDirection;
 
   /// Used for setting the width of selected items.
   ///
@@ -122,7 +120,7 @@ class FlutterDatePickerTimeline extends StatefulWidget {
   ///       fontFamily: widget.calendarMode == CalendarMode.gregorian ? 'nunito' : 'dana',
   ///       package: 'flutter_date_picker_timeline',
   ///       color: widget.unselectedItemBackgroundColor)]
-  final TextStyle selectedItemTextStyle;
+  final TextStyle? selectedItemTextStyle;
 
   /// Used for setting the style of unselected items [Text].
   ///
@@ -130,7 +128,7 @@ class FlutterDatePickerTimeline extends StatefulWidget {
   ///       fontFamily: widget.calendarMode == CalendarMode.gregorian ? 'nunito' : 'dana',
   ///       package: 'flutter_date_picker_timeline',
   ///       color: widget.selectedItemBackgroundColor)]
-  final TextStyle unselectedItemTextStyle;
+  final TextStyle? unselectedItemTextStyle;
 
   /// Called whenever any date gets selected.
   final DateChangeListener onSelectedDateChange;
@@ -141,8 +139,8 @@ class FlutterDatePickerTimeline extends StatefulWidget {
 }
 
 class _FlutterDatePickerTimelineState extends State<FlutterDatePickerTimeline> {
-  AutoScrollController _scrollController;
-  ValueNotifier<DateTime> _selectedDateValueNotifier;
+  late AutoScrollController _scrollController;
+  late ValueNotifier<DateTime?> _selectedDateValueNotifier;
 
   get _defaultSelectedItemTextStyle => TextStyle(
       fontFamily:
@@ -162,7 +160,7 @@ class _FlutterDatePickerTimelineState extends State<FlutterDatePickerTimeline> {
       axis: Axis.horizontal,
     );
     _selectedDateValueNotifier =
-        ValueNotifier<DateTime>(widget.initialSelectedDate);
+        ValueNotifier<DateTime?>(widget.initialSelectedDate);
     if (widget.initialFocusedDate != null ||
         widget.initialSelectedDate != null) {
       _scrollToInitialFocusedDate();
@@ -195,10 +193,10 @@ class _FlutterDatePickerTimelineState extends State<FlutterDatePickerTimeline> {
         height: widget.itemHeight,
         child: ScrollConfiguration(
             behavior: CustomScrollBehavior(),
-            child: ValueListenableBuilder<DateTime>(
+            child: ValueListenableBuilder<DateTime?>(
                 valueListenable: _selectedDateValueNotifier,
-                builder: (BuildContext context, DateTime selectedDate,
-                    Widget child) {
+                builder: (BuildContext context, DateTime? selectedDate,
+                    Widget? child) {
                   return ListView.builder(
                       padding: widget.listViewPadding,
                       scrollDirection: Axis.horizontal,
@@ -246,12 +244,12 @@ class _FlutterDatePickerTimelineState extends State<FlutterDatePickerTimeline> {
     );
   }
 
-  bool _isDatePickerItemSelected(DateTime itemDate, DateTime selectedDate) {
+  bool _isDatePickerItemSelected(DateTime itemDate, DateTime? selectedDate) {
     if (selectedDate == null) return false;
     return itemDate.dateDifference(selectedDate) == 0;
   }
 
-  _setSelectedDate(DateTime date) {
+  _setSelectedDate(DateTime? date) {
     _selectedDateValueNotifier.value = date;
     widget.onSelectedDateChange(date);
   }
@@ -263,7 +261,7 @@ class _FlutterDatePickerTimelineState extends State<FlutterDatePickerTimeline> {
 
   _scrollToInitialFocusedDate() async {
     final DateTime initialFocusedDate =
-        widget.initialFocusedDate ?? widget.initialSelectedDate;
+        widget.initialFocusedDate ?? widget.initialSelectedDate!;
     _scrollToIndex(initialFocusedDate.dateDifference(widget.startDate));
   }
 }

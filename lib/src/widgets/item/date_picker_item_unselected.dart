@@ -4,14 +4,14 @@ import 'package:flutter_date_picker_timeline/src/utils/date_helper_extension.dar
 
 class DatePickerItemUnselected extends StatelessWidget {
   const DatePickerItemUnselected(
-      {@required this.date,
-      @required this.calendarMode,
-      @required this.width,
-      @required this.itemRadius,
-      @required this.itemMargin,
-      @required this.itemBackgroundColor,
-      @required this.textStyle,
-      @required this.onPressed});
+      {required this.date,
+      required this.calendarMode,
+      required this.width,
+      required this.itemRadius,
+      required this.itemMargin,
+      required this.itemBackgroundColor,
+      required this.textStyle,
+      required this.onPressed});
 
   final DateTime date;
   final CalendarMode calendarMode;
