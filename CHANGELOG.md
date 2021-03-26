@@ -1,3 +1,6 @@
+## 0.3.1
+* feat: update shamsi_date plugin to the last version.
+
 ## 0.3.0
 * **Breaking**: migrated to null safety.
 
