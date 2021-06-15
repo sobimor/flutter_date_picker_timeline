@@ -31,7 +31,7 @@ class FlutterDatePickerTimeline extends StatefulWidget {
     this.selectedItemTextStyle,
     this.unselectedItemTextStyle,
     required this.onSelectedDateChange,
-  })   : assert((endDate.isSameDate(startDate) || endDate.isAfter(startDate)),
+  })  : assert((endDate.isSameDate(startDate) || endDate.isAfter(startDate)),
             "The end date must be same or before the start date!"),
         assert(
             initialSelectedDate == null ||
