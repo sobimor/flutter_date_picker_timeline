@@ -1,5 +1,8 @@
+## 0.3.2
+* fix: update shamsi_date plugin to the last version.
+
 ## 0.3.1
-* feat: update shamsi_date plugin to the last version.
+* fix: update shamsi_date plugin to the last version.
 
 ## 0.3.0
 * **Breaking**: migrated to null safety.
@@ -12,10 +15,10 @@
 * feat: add textDirection property in [FlutterDatePickerTimeline](https://github.com/sobimor/flutter_date_picker_timeline/blob/master/lib/src/flutter_date_picker_timeline_widget.dart), #2.
 
 ## 0.1.5
-* feat: downgrade intl plugin to the last stable version.
+* fix: downgrade intl plugin to the last stable version.
 
 ## 0.1.4
-* feat: update intl plugin to the last version.
+* fix: update intl plugin to the last version.
 
 ## 0.1.3
 * fix: selecting multiple selected dates.
