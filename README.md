@@ -18,7 +18,7 @@
 
 ```yml
 dependencies:
-  flutter_date_picker_timeline: ^0.3.2
+  flutter_date_picker_timeline: ^0.3.3
 ```
 
 

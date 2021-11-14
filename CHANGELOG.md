@@ -1,3 +1,6 @@
+## 0.3.3
+* fix: update shamsi_date, scroll_to_index plugins to the last version.
+
 ## 0.3.2
 * fix: update shamsi_date plugin to the last version.
 
