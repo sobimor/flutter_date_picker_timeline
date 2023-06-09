@@ -4,7 +4,7 @@ version: 0.3.3
 homepage: https://github.com/sobimor/flutter_date_picker_timeline
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: '>=2.18.0 <3.0.0'
 
 dependencies:
   flutter:

@@ -10,7 +10,6 @@
 .svn/
 .fvm/
 
-
 # IntelliJ related
 *.iml
 *.ipr
