@@ -5,23 +5,34 @@ packages:
     dependency: transitive
     description:
       name: characters
-      url: "https://pub.dartlang.org"
+      sha256: "04a925763edad70e8443c99234dc3328f442e811f1d8fd1a72f1c8ad0f69a605"
+      url: "https://pub.dev"
     source: hosted
-    version: "1.1.0"
+<<<<<<< HEAD
+    version: "1.3.0"
+=======
+    version: "1.2.1"
+>>>>>>> 87df08b (flutter 3.10+ compability, update intl)
   clock:
     dependency: transitive
     description:
       name: clock
-      url: "https://pub.dartlang.org"
+      sha256: cb6d7f03e1de671e34607e909a7213e31d7752be4fb66a86d29fe1eb14bfb5cf
+      url: "https://pub.dev"
     source: hosted
-    version: "1.1.0"
+    version: "1.1.1"
   collection:
     dependency: transitive
     description:
       name: collection
-      url: "https://pub.dartlang.org"
+      sha256: "4a07be6cb69c84d677a6c3096fcf960cc3285a8330b4603e0d463d15d9bd934c"
+      url: "https://pub.dev"
     source: hosted
-    version: "1.15.0"
+<<<<<<< HEAD
+    version: "1.17.1"
+=======
+    version: "1.16.0"
+>>>>>>> 87df08b (flutter 3.10+ compability, update intl)
   flutter:
     dependency: "direct main"
     description: flutter
@@ -31,55 +42,89 @@ packages:
     dependency: "direct main"
     description:
       name: intl
+      sha256: "3bc132a9dbce73a7e4a21a17d06e1878839ffbf975568bc875c60537824b0c4d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.18.1"
+<<<<<<< HEAD
+  js:
+    dependency: transitive
+    description:
+      name: js
+      sha256: f2c445dce49627136094980615a031419f7f3eb393237e4ecd97ac15dea343f3
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.6.7"
+=======
+>>>>>>> 87df08b (flutter 3.10+ compability, update intl)
+  material_color_utilities:
+    dependency: transitive
+    description:
+      name: material_color_utilities
+<<<<<<< HEAD
+      sha256: d92141dc6fe1dad30722f9aa826c7fbc896d021d792f80678280601aff8cf724
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.0"
+=======
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.17.0"
+    version: "0.1.5"
+>>>>>>> 87df08b (flutter 3.10+ compability, update intl)
   meta:
     dependency: transitive
     description:
       name: meta
-      url: "https://pub.dartlang.org"
+      sha256: "3c74dbf8763d36539f114c799d8a2d87343b5067e9d796ca22b5eb8437090ee3"
+      url: "https://pub.dev"
     source: hosted
-    version: "1.7.0"
+<<<<<<< HEAD
+    version: "1.9.1"
+=======
+    version: "1.8.0"
+>>>>>>> 87df08b (flutter 3.10+ compability, update intl)
   path:
     dependency: transitive
     description:
       name: path
-      url: "https://pub.dartlang.org"
+      sha256: "8829d8a55c13fc0e37127c29fedf290c102f4e40ae94ada574091fe0ff96c917"
+      url: "https://pub.dev"
     source: hosted
-    version: "1.8.0"
+    version: "1.8.3"
   scroll_to_index:
     dependency: "direct main"
     description:
       name: scroll_to_index
-      url: "https://pub.dartlang.org"
+      sha256: "5df1597b5bfa1703c02962a7478a187a8c9dedaeb871aedbf7874ee0d58a0bba"
+      url: "https://pub.dev"
     source: hosted
-    version: "2.1.0"
+    version: "2.1.1"
   shamsi_date:
     dependency: "direct main"
     description:
       name: shamsi_date
-      url: "https://pub.dartlang.org"
+      sha256: "938bd68e6f99fab7f93c04a0fc4248a09355f67eca90510f0ee7579f6014b56c"
+      url: "https://pub.dev"
     source: hosted
-    version: "1.0.0"
+    version: "1.0.1"
   sky_engine:
     dependency: transitive
     description: flutter
     source: sdk
     version: "0.0.99"
-  typed_data:
-    dependency: transitive
-    description:
-      name: typed_data
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.3.0"
   vector_math:
     dependency: transitive
     description:
       name: vector_math
-      url: "https://pub.dartlang.org"
+      sha256: "80b3257d1492ce4d091729e3a67a60407d227c27241d6927be0130c98e741803"
+      url: "https://pub.dev"
     source: hosted
-    version: "2.1.0"
+<<<<<<< HEAD
+    version: "2.1.4"
 sdks:
-  dart: ">=2.12.0 <3.0.0"
+  dart: ">=3.0.0-0 <4.0.0"
+=======
+    version: "2.1.2"
+sdks:
+  dart: ">=2.18.0 <3.0.0"
+>>>>>>> 87df08b (flutter 3.10+ compability, update intl)

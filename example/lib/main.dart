@@ -23,9 +23,7 @@ class MyApp extends StatelessWidget {
                   startDate: DateTime(2020, 07, 01),
                   endDate: DateTime(2020, 12, 30),
                   initialSelectedDate: DateTime(2020, 07, 24),
-                  onSelectedDateChange: (DateTime dateTime) {
-                    print(dateTime);
-                  },
+                  onSelectedDateChange: (DateTime? time) {},
                 )),
           )),
     );
