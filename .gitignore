@@ -9,7 +9,10 @@
 .history
 .svn/
 .fvm/
+<<<<<<< HEAD
 
+=======
+>>>>>>> 87df08b (flutter 3.10+ compability, update intl)
 
 # IntelliJ related
 *.iml
